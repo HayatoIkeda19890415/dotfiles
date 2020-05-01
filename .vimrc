@@ -16,3 +16,5 @@ set undodir=~/vimfiles/tmp
 set backupdir=~/vimfiles/tmp
 
 colorscheme monokai
+
+set foldmethod=indent
