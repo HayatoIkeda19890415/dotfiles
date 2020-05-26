@@ -18,3 +18,13 @@ set backupdir=~/vimfiles/tmp
 colorscheme monokai
 
 set foldmethod=indent
+autocmd BufRead * normal zR
+
+set wildmenu
+set wildmode=list:longest,full
+
+set incsearch
+set hlsearch
+
+set ruler
+set showcmd
