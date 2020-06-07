@@ -21,7 +21,6 @@ set foldmethod=indent
 autocmd BufRead * normal zR
 
 set wildmenu
-set wildmode=list:longest,full
 
 set incsearch
 set hlsearch
