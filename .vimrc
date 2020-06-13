@@ -28,3 +28,5 @@ set hlsearch
 
 set ruler
 set showcmd
+
+nn <C-k> :set invwrap<CR>
