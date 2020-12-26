@@ -3,7 +3,6 @@ filetype plugin indent on
 
 set autoindent
 set number
-set relativenumber
 set expandtab
 set tabstop=4
 set shiftwidth=4
