@@ -29,3 +29,15 @@ autocmd BufRead * normal zR
 
 "shortcuts
 nn <C-k> :set invwrap<CR>
+
+"Install Vim-Plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+    cd $HOME
+    silent !curl -fLo .vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+"Install Plugins using Vim-Plug
+call plug#begin('~/.vim/plugged')
+
+call plug#end()
