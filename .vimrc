@@ -31,13 +31,20 @@ autocmd BufRead * normal zR
 nn <C-k> :set invwrap<CR>
 
 "Install Vim-Plug
-if empty(glob('~/.vim/autoload/plug.vim'))
-    cd $HOME
-    silent !curl -fLo .vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+"Target only Windows and Linux.
+let s:plugVimPath = ''
+let s:pluggedPath = ''
+if has('Win32')
+    let s:plugVimPath = $HOME.'/vimfiles/autoload/plug.vim'
+    let s:pluggedPath = $HOME.'/vimfiles/plugged'
+elseif has('Linux')
+    let s:plugVimPath = $HOME.'/.vim/autoload/plug.vim'
+    let s:pluggedPath = $HOME.'/.vim/plugged'
+endif
+if empty(glob(s:plugVimPath))
+    execute 'silent !curl -fLo' s:plugVimPath '--create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
-
-"Install Plugins using Vim-Plug
-call plug#begin('~/.vim/plugged')
+call plug#begin(s:pluggedPath)
 
 call plug#end()
