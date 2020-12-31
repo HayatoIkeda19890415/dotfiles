@@ -14,6 +14,9 @@ set incsearch
 set hlsearch
 set ruler
 set showcmd
+set showtabline=2
+set encoding=utf-8
+set guioptions-=e
 
 "Open all folds when read buffer
 autocmd BufRead * normal zR
@@ -54,5 +57,20 @@ if empty(glob(s:plugVimPath))
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 call plug#begin(s:pluggedPath)
+    Plug 'itchyny/lightline.vim'
+    Plug 'itchyny/vim-gitbranch'
+    Plug 'lambdalisue/battery.vim'
 
 call plug#end()
+
+let g:lightline = {
+    \ 'tabline': {
+        \ 'left':[['cwd'], ['tabs']],
+        \ 'right':[['close'], ['gitbranch', 'battery']]
+    \ },
+    \ 'component_function': {
+        \ 'cwd': 'getcwd',
+        \ 'gitbranch': 'gitbranch#name',
+        \ 'battery': 'battery#component',
+    \ },
+    \ }
