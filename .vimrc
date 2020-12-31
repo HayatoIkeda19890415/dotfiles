@@ -48,7 +48,7 @@ colorscheme molokai
 
 "Install Vim-Plug
 let s:plugVimPath = s:runTimePath.'/autoload/plug.vim'
-let s:pluggedPath = s:runTimePath.'plugged'
+let s:pluggedPath = s:runTimePath.'/plugged'
 if empty(glob(s:plugVimPath))
     execute 'silent !curl -fLo' s:plugVimPath '--create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
