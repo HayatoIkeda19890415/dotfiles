@@ -60,6 +60,8 @@ call plug#begin(s:pluggedPath)
     Plug 'itchyny/lightline.vim'
     Plug 'itchyny/vim-gitbranch'
     Plug 'lambdalisue/battery.vim'
+    Plug 'lambdalisue/fern.vim'
+    Plug 'mbbill/undotree'
 
 call plug#end()
 
