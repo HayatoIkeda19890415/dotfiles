@@ -20,6 +20,7 @@ autocmd BufRead * normal zR
 
 "Shortcuts
 nn <C-k> :set invwrap<CR>
+cno Q q
 
 "Change setting depend on OS
 if has('Win32')
