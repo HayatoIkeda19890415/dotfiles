@@ -15,6 +15,9 @@ set hlsearch
 set ruler
 set showcmd
 
+"status line include encoding, char code and total line count
+:set statusline=%<%f%h%m%r\ %{&fenc!=''?&fenc:&enc}%=\ 0x%B\ \ %l,%c%V\ %L
+
 "Open all folds when read buffer
 autocmd BufRead * normal zR
 
