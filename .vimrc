@@ -59,5 +59,7 @@ if empty(glob(s:plugVimPath))
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 call plug#begin(s:pluggedPath)
+    Plug 'https://github.com/ctrlpvim/ctrlp.vim'
+    Plug 'https://github.com/mbbill/undotree'
 
 call plug#end()
