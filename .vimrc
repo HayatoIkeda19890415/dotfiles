@@ -15,8 +15,6 @@ set hlsearch
 set ruler
 set showcmd
 
-set guifont=Cica:h12:cSHIFTJIS:qDRAFTb
-
 "status line include encoding, char code and total line count
 :set statusline=%<%f%h%m%r\ %{&fenc!=''?&fenc:&enc}%=\ 0x%B\ \ %l,%c%V\ %L
 
