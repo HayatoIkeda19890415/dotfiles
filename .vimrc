@@ -15,6 +15,8 @@ set hlsearch
 set ruler
 set showcmd
 
+set guifont=Cica:h12:cSHIFTJIS:qDRAFTb
+
 "status line include encoding, char code and total line count
 :set statusline=%<%f%h%m%r\ %{&fenc!=''?&fenc:&enc}%=\ 0x%B\ \ %l,%c%V\ %L
 
@@ -41,13 +43,13 @@ let &undodir=&directory
 let &backupdir=&directory
 
 "Set colorscheme
-let s:colorSchemePath = s:runTimePath.'/colors/molokai.vim'
+set background=dark
+set t_Co=256
+let s:colorSchemePath = s:runTimePath.'/colors/iceberg.vim'
 if empty(glob(s:colorSchemePath))
-    execute 'silent !curl -fLo' s:colorSchemePath '--create-dirs https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim'
+    execute 'silent !curl -fLo' s:colorSchemePath '--create-dirs https://raw.githubusercontent.com/cocopon/iceberg.vim/master/colors/iceberg.vim'
 endif
-let g:molokai_original = 1
-let g:rehash256 = 1
-colorscheme molokai
+colorscheme iceberg
 
 "Install Vim-Plug
 let s:plugVimPath = s:runTimePath.'/autoload/plug.vim'

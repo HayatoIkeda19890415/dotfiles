@@ -1,3 +1,7 @@
-let g:molokai_original = 1
-let g:rehash256 = 1
-colorscheme molokai
+set background=dark
+colorscheme iceberg
+
+" Don't show menu bar in GVim
+set guioptions-=m
+" Don't show tool bar in GVim
+set guioptions-=T
