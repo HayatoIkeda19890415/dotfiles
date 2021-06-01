@@ -59,5 +59,6 @@ endif
 call plug#begin(s:pluggedPath)
     Plug 'https://github.com/ctrlpvim/ctrlp.vim'
     Plug 'https://github.com/mbbill/undotree'
+    Plug 'https://github.com/tyru/caw.vim'
 
 call plug#end()
