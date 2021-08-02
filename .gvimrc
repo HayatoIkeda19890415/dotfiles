@@ -1,4 +1,3 @@
-set guifont=Cica:h12:cSHIFTJIS:qDRAFTb
 set background=dark
 colorscheme iceberg
 
