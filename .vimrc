@@ -18,7 +18,11 @@ set list
 set listchars=eol:$,tab:>-,space:*,nbsp:+
 
 "status line include encoding, char code and total line count
-:set statusline=%<%f%h%m%r\ %{&fenc!=''?&fenc:&enc}%=\ 0x%B\ \ %l,%c%V\ %L
+set statusline=%<%f%h%m%r\ %{&fenc!=''?&fenc:&enc}%=\ 0x%B\ \ %l,%c%V\ %L
+
+"use emoji
+"emoji can be used at encoding(not fileencoding)=utf-8, see help of this option
+set renderoptions=type:directx
 
 "Open all folds when read buffer
 autocmd BufRead * normal zR
