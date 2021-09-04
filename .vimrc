@@ -15,7 +15,7 @@ set hlsearch
 set ruler
 set showcmd
 set list
-set listchars=eol:$,tab:>-,space:*,nbsp:+
+set listchars=eol:$,tab:>-,space:%,nbsp:?
 
 "status line include encoding, char code and total line count
 set statusline=%<%f%h%m%r\ %{&fenc!=''?&fenc:&enc}%=\ 0x%B\ \ %l,%c%V\ %L
