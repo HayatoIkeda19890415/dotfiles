@@ -27,6 +27,9 @@ set renderoptions=type:directx
 "Open all folds when read buffer
 autocmd BufRead * normal zR
 
+"Comment for Windows batch file
+autocmd FileType dosbatch setlocal commentstring=REM\ %s
+
 "Shortcuts
 nn <C-k> :set invwrap<CR>
 
@@ -62,6 +65,9 @@ if empty(glob(s:plugVimPath))
     execute 'silent !curl -fLo' s:plugVimPath '--create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
+
+"Set plugins
 call plug#begin(s:pluggedPath)
+    Plug 'tpope/vim-commentary'
 
 call plug#end()
