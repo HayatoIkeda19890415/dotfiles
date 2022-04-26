@@ -1,5 +1,6 @@
 set background=dark
-colorscheme iceberg
+colorscheme rigel
+hi Cursor guibg=#009c00
 
 " Don't show menu bar in GVim
 set guioptions-=m
